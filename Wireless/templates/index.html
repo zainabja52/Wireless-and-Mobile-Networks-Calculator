@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telecom Calculators</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Telecom Calculator</h1>
+             <img src="/static/asserts/icon.png" alt="Icon" class="header-icon">
+         </div>
+        <form id="calcForm">
+            <label for="calculation_type">Calculation Type:</label>
+            <select id="calculation_type" onchange="updateFormFields()">
+                <option value="sampler_and_interleaver">Sampler and Interleaver</option>
+                <option value="ofdm">OFDM</option>
+                <option value="power_transmitted">Power Transmitted</option>
+                <option value="throughput">Throughput</option>
+                <option value="cellular_system">Cellular System Design</option>
+            </select>
+            <br><br>
+            <div id="dynamic_inputs"></div>
+            <br>
+            <button type="button" onclick="submitData()">Calculate</button>
+            <button type="button" onclick="clearForm()">Clear</button>
+        </form>
+        <div id="results" class="results"></div>
+    </div>
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
